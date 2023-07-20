@@ -1,0 +1,37 @@
+<%- include('../layouts/header') %>
+
+<div class="container">
+    <div class="heading">
+        <h1>Dashboard</h1>
+    </div>
+    <a style="text-align: center;" href="/" class="btn btn-success">Back-To-Home</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Fullname</th>
+                <th scope="col">Email</th>
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td> <img src="/uploads/<%= all_data.image %>" width="80" height="80"> </td>
+                <td><%=  all_data.fullname %> </td>
+                <td><%=  all_data.email %> </td>
+            </tr>
+
+
+        </thead>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<%- include('../layouts/footer') %>

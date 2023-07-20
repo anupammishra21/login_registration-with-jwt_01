@@ -1,0 +1,36 @@
+<%- include('../layouts/header') %>
+
+    <div class="container">
+        <div class="heading">Login</div>
+        <% if(success.length) {%>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Hey!</strong> <%= success %>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <% } %>
+      
+            <% if(error.length) {%>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Hey!</strong> <%= error %>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                <% } %>
+        <form method="post" action="/login">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Save</button>
+        </form>
+        <h3 style="text-align: center;"><a href="/">Don't have an account? Sign up here </a></h3>
+    </div>
+
+    <%- include('../layouts/footer') %>
